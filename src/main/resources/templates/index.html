@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>景区游客空间数据管理</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+    $(function () {
+        $("#click").click(function () {
+        })
+    })
+</script>
+<style type="text/css">
+    #div{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: url(img/background.png)  no-repeat center 0px;
+        background-size: cover;
+
+
+
+        background-position: center 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+
+    }
+    .container {
+        display: table;
+    }
+</style>
+<body>
+
+<div id="div" class="container">
+    <div class="col-lg-11">
+        <h4 class="bg-info">来一场说走就走的旅行</h4>
+
+        <h1 class="bg-warning">Let's go!</h1>
+        <a th:href="@{/userLogin}" class="btn btn-info btn-lg" onclick="return confirm('本网站需要您开启定位服务，是否授权登录？');">用户登录</a>
+       <a th:href="@{/managerLogin}" class="btn btn-info btn-lg">管理员登录</a><br><br>
+   </div>
+ </div>
+</body>
+</html>
